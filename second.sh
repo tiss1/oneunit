@@ -1,0 +1,1 @@
+#!/bin/bashif [ -d "/etc/ppp/peers/" ]; then        echo "PPP already installed"else        sudo apt-get install ppp screen elinksfisudo -i -- cp /home/pi/rnet /etc/ppp/peers/sudo pon rnetcat /var/log/syslog | grep -a pppd #(crontab -l 2>/dev/null; echo "*/5 * * * * /path/to/job -with args") | crontab -

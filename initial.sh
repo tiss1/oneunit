@@ -1,0 +1,1 @@
+#!/bin/bashecho "enable_uart=1" >> /boot/config.txtsudo systemctl stop serial-getty@ttyS0.servicesudo systemctl disable serial-getty@ttyS0.servicesed -i -e s/console=serial0,115200//g /home/pi/test3.txtecho "dtoverlay=pi3-miniuart-bt" >> /boot/config.txtsudo reboot
